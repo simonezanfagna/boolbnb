@@ -1,0 +1,209 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: #e6e8e8;
+}
+
+.content{
+  background: #e6e8e8;
+}
+
+a.vue_card_link{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: 1000;
+    left: 0;
+}
+
+.team-4{
+  height: 200px;
+}
+// .row {
+//     width: 100%;
+// }
+.barra_ricerca_tomtom{
+    position: relative;
+    bottom:5px;
+    .tt-search-box{
+        border-radius:1000px;
+    }
+
+    .tt-search-box-input-container{
+        border-radius:1000px;
+    }
+    .tt-search-box-result-list-container{
+        border-radius:10px;
+    }
+
+    svg{
+        fill:#B0C6F5;
+        &.black2 {
+            fill:black;
+        }
+    }
+
+}
+
+.premium{
+    position: absolute;
+    right:5px;
+    top:5px;
+    width:30px;
+    fill: #ffd740;
+}
+
+.premium-shadow{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255,215,64,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(255,215,64,1);
+    box-shadow: 0px 0px 15px 0px rgba(255,215,64,1);
+
+
+}
+
+#mostra, #nascondi{
+    cursor: pointer;
+    margin-left: 20px;
+    &:hover{
+        text-decoration: underline;
+    }
+
+
+}
+#radioCss{
+  @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    input[type='radio'] {
+      --active: #275EFE;
+      --active-inner: #fff;
+      --focus: 2px rgba(39, 94, 254, .3);
+      --border: #BBC1E1;
+      --border-hover: #275EFE;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 21px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background .3s, border-color .3s, box-shadow .2s;
+      &:after {
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      }
+      &:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      }
+      &:disabled {
+        --b: var(--disabled);
+        cursor: not-allowed;
+        opacity: .9;
+        &:checked {
+          --b: var(--disabled-inner);
+          --bc: var(--border);
+        }
+        & + label {
+          cursor: not-allowed;
+        }
+      }
+      &:hover {
+        &:not(:checked) {
+          &:not(:disabled) {
+            --bc: var(--border-hover);
+          }
+        }
+      }
+      &:focus {
+        box-shadow: 0 0 0 var(--focus);
+      }
+      &:not(.switch) {
+        width: 21px;
+        &:after {
+          opacity: var(--o, 0);
+        }
+        &:checked {
+          --o: 1;
+        }
+      }
+      & + label {
+        font-size: 14px;
+        line-height: 21px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        margin-left: 4px;
+      }
+    }
+    input[type='radio'] {
+      border-radius: 50%;
+      &:after {
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background: var(--active-inner);
+        opacity: 0;
+        transform: scale(var(--s, .7));
+      }
+      &:checked {
+        --s: .5;
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: 1100px) and (max-width: 1480px) {
+    #testingVue {
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .barra_ricerca_tomtom {
+        svg {
+            fill: black;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .team-4{
+        height: auto;
+    }
+    .section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    #smaller {
+        font-size: 1.8rem;
+    }
+    .barra_ricerca_tomtom {
+        width: 180px;
+    }
+    #testingVue {
+        margin-right: -10px;
+    }
+}

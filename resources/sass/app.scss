@@ -1,0 +1,29 @@
+// Fonts
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+
+
+@import 'general';
+
+@import 'header';
+
+@import 'sectionHome';
+
+@import 'login';
+// @import 'partials/_variables';
+// @import 'partials/_mixin';
+
+@import 'dettagli/_general';
+@import 'dettagli/_header';
+@import 'dettagli/_content';
+// @import 'dettagli/_footer';
+
+@import 'dettagli/_card';
+@import 'dettagli/_error';
+@import '_filter';
+@import '_footer';
